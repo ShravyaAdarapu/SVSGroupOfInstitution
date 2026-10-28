@@ -1,0 +1,1 @@
+import React from "react"; import {createRoot} from "react-dom/client"; import Feature from "./components/ui/feature-24"; createRoot(document.getElementById("feature-root")!).render(<Feature/>);

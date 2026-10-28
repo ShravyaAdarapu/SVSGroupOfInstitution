@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@theme inline {--color-background:#fff;--color-foreground:#152d29;--color-muted:#f0f6f4;--color-muted-foreground:#697b74;--color-primary:#167f77;--color-primary-foreground:#fff;--color-border:#dce7e1;--color-input:#dce7e1;--color-ring:#167f77;}
+body{margin:0;font-family:Arial,sans-serif} .demo-nav{padding:20px 5%;border-bottom:1px solid #dce7e1;font-size:14px;color:#164d48} @media(prefers-reduced-motion:reduce){*{animation:none!important}}

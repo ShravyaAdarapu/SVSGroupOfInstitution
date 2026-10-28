@@ -1,0 +1,1 @@
+import {build} from "esbuild";import {execFileSync} from "node:child_process"; await build({entryPoints:["src/feature-demo.tsx"],bundle:true,outfile:"dist/assets/feature-demo.js",jsx:"automatic",minify:true}); execFileSync(process.execPath,["node_modules/@tailwindcss/cli/dist/index.mjs","-i","src/index.css","-o","dist/assets/feature-demo.css","--minify"],{stdio:"inherit"});
