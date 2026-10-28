@@ -243,16 +243,17 @@ nav details[open]:not(.is-closing) summary:after{transform:translateY(1px) rotat
 @media(max-width:760px){.has-video-header .hero.hero-film{min-height:600px;padding-top:calc(var(--top-h,110px) + 32px)}}
 
 /* Homepage: stats band */
-.svs-legacy{padding:84px 6% 70px;background:radial-gradient(circle at 15% 0,#1d5b5566 0,transparent 45%),#0b2725;color:#fff;text-align:center}
+.svs-legacy{padding:84px 6% 70px;background:radial-gradient(circle at 15% 0,#1d5b5566 0,transparent 45%),linear-gradient(180deg,#0b2725e0 0%,#0b2725cc 50%,#0b2725eb 100%),url(assets/hospital-campus.webp) center 35%/cover no-repeat,#0b2725;color:#fff;text-align:center}
+.legacy-stats li{backdrop-filter:blur(2px)}
 .legacy-inner{max-width:1240px;margin:0 auto}
 .svs-legacy h2{margin:0 0 16px;font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1.15;color:#fff}
-.svs-legacy h2 span{color:#d8b25a}
+.svs-legacy h2 span{color:#5fd1c4}
 .svs-legacy>div>p{max-width:640px;margin:0 auto 46px;font-size:16px;line-height:1.75;color:#b9cfca}
 .legacy-stats{display:grid;grid-template-columns:repeat(6,1fr);margin:0;padding:0;list-style:none;border-top:1px solid #ffffff1f;border-bottom:1px solid #ffffff1f}
 .legacy-stats li{display:flex;flex-direction:column;align-items:center;gap:10px;padding:34px 12px;border-left:1px solid #ffffff1f;transition:background .3s}
 .legacy-stats li:first-child{border-left:0}
 .legacy-stats li:hover{background:#ffffff08}
-.legacy-stats svg{width:28px;height:28px;fill:none;stroke:#d8b25a;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.legacy-stats svg{width:28px;height:28px;fill:none;stroke:#5fd1c4;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .legacy-stats strong{font-size:clamp(30px,3vw,40px);font-weight:700;line-height:1;letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums}
 .legacy-stats span{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#9fbab4}
 @media(max-width:1000px){.legacy-stats{grid-template-columns:repeat(3,1fr)}.legacy-stats li:nth-child(4){border-left:0}.legacy-stats li:nth-child(n+4){border-top:1px solid #ffffff1f}}
@@ -261,7 +262,7 @@ nav details[open]:not(.is-closing) summary:after{transform:translateY(1px) rotat
 /* Homepage: admissions cards with UG / PG switch */
 .svs-admit{position:relative;padding:80px 6% 90px;background:linear-gradient(180deg,#0b2725e6,#0f3632d9),url(assets/campus-poster.jpg) center/cover no-repeat;color:#fff;text-align:center}
 .admit-inner{max-width:1180px;margin:0 auto}
-.admit-label{display:inline-block;margin-bottom:12px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#d8b25a}
+.admit-label{display:inline-block;margin-bottom:12px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5fd1c4}
 .svs-admit h2{margin:0 0 28px;font-family:Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);color:#fff}
 .admit-toggle{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-bottom:64px;padding:6px;border-radius:999px;background:#ffffff14;border:1px solid #ffffff2e;backdrop-filter:blur(6px)}
 .admit-toggle button{position:relative;z-index:1;padding:12px 28px;border:0;border-radius:999px;background:none;color:#ffffffa6;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:color .3s}
@@ -273,13 +274,13 @@ nav details[open]:not(.is-closing) summary:after{transform:translateY(1px) rotat
 .admit-panel.is-entering .admit-card{animation:admit-in .5s var(--ease-out) both}
 .admit-panel .admit-card:nth-child(2){animation-delay:.08s}.admit-panel .admit-card:nth-child(3){animation-delay:.16s}
 @keyframes admit-in{from{opacity:0;transform:translateY(18px)}}
-.admit-card{position:relative;flex:1 1 300px;max-width:370px;display:flex;flex-direction:column;align-items:center;padding:56px 30px 30px;border-radius:24px;background:radial-gradient(circle at 100% 100%,var(--primary) 0 54px,#d8b25a 54px 57px,#fff 57.5px);color:var(--ink);box-shadow:0 24px 60px #0005;transition:transform .35s var(--ease-out),box-shadow .35s var(--ease-out)}
+.admit-card{position:relative;flex:1 1 300px;max-width:370px;display:flex;flex-direction:column;align-items:center;padding:56px 30px 30px;border-radius:24px;background:#fff;color:var(--ink);box-shadow:0 24px 60px #0005;transition:transform .35s var(--ease-out),box-shadow .35s var(--ease-out)}
 .admit-card:hover{transform:translateY(-6px);box-shadow:0 30px 70px #0007}
-.admit-badge{position:absolute;top:-34px;left:50%;transform:translateX(-50%);display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:var(--deep);border:3px solid #d8b25a;box-shadow:0 8px 20px #0003}
-.admit-badge svg{width:28px;height:28px;fill:none;stroke:#d8b25a;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.admit-badge{position:absolute;top:-34px;left:50%;transform:translateX(-50%);display:grid;place-items:center;width:68px;height:68px;border-radius:50%;background:var(--primary);border:4px solid #fff;box-shadow:0 8px 20px #0003}
+.admit-badge svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .admit-card h3{margin:0 0 14px;font-size:22px;line-height:1.3;color:var(--deep)}
-.admit-rule{position:relative;width:110px;height:2px;margin-bottom:16px;background:linear-gradient(90deg,#d8b25a 0 44%,transparent 44% 56%,#d8b25a 56%)}
-.admit-rule:after{content:'';position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;background:#d8b25a;transform:translate(-50%,-50%)}
+.admit-rule{position:relative;width:110px;height:2px;margin-bottom:16px;background:linear-gradient(90deg,var(--primary) 0 44%,transparent 44% 56%,var(--primary) 56%)}
+.admit-rule:after{content:'';position:absolute;left:50%;top:50%;width:6px;height:6px;border-radius:50%;background:var(--primary);transform:translate(-50%,-50%)}
 .admit-card p{flex:1;margin:0 0 22px;font-size:14.5px;line-height:1.7;color:var(--muted)}
 .admit-primary,.admit-secondary{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 20px;border-radius:10px;font:inherit;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .2s}
 .admit-primary{margin-bottom:12px;border:0;background:var(--primary);color:#fff}
@@ -290,3 +291,194 @@ nav details[open]:not(.is-closing) summary:after{transform:translateY(1px) rotat
 .admit-primary:hover span,.admit-secondary:hover span{transform:translateX(4px)}
 @media(max-width:560px){.svs-admit{padding:60px 5% 70px}.admit-toggle button{padding:11px 16px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.admit-thumb,.admit-card{transition:none}.admit-panel.is-entering .admit-card{animation:none}}
+
+/* Footer contact band and social links */
+.footer-contact{display:grid;grid-template-columns:1.2fr 1fr 1.05fr 1.2fr;gap:0;margin:0 0 48px;border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 40px #164d4810;overflow:hidden}
+.fc-item{display:flex;gap:16px;padding:28px 26px;border-left:1px solid var(--line);transition:background .25s}
+.fc-item:first-child{border-left:0}
+.fc-item:hover{background:#f7fbfa}
+.fc-item>svg{flex-shrink:0;width:42px;height:42px;padding:10px;border-radius:50%;background:var(--soft);fill:none;stroke:var(--primary);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:background .25s,stroke .25s}
+.fc-item:hover>svg{background:var(--primary);stroke:#fff}
+.fc-item>div{min-width:0}
+.footer-contact h4{margin:2px 0 8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+.footer-contact p{margin:6px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}
+.footer-contact a{color:var(--deep);font-size:13px;font-weight:600}
+.footer-contact a:hover{color:var(--primary)}
+.footer-contact .fc-big{display:inline-block;font-size:19px;font-weight:700;letter-spacing:-.01em;color:var(--deep)}
+.footer-contact .fc-email{font-size:15px;overflow-wrap:normal;word-break:normal}
+.footer-contact p+a{display:inline-block;margin-top:10px}
+.footer-social{display:flex;gap:10px;margin-top:18px}
+.footer-social a{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--deep);transition:background .25s,color .25s,transform .25s var(--ease-out)}
+.footer-social a:hover{background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px)}
+.footer-social svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:1100px){.footer-contact{grid-template-columns:1fr 1fr}.fc-item:nth-child(3){border-left:0}.fc-item:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:600px){.footer-contact{grid-template-columns:1fr;margin-bottom:36px}.fc-item{border-left:0;padding:22px 20px}.fc-item+.fc-item{border-top:1px solid var(--line)}}
+@media print{.footer-contact{box-shadow:none}.footer-social{display:none}}
+
+/* About page: photo banner under a transparent header, overlapping panel with a side menu */
+.about-hero{position:relative;display:flex;align-items:flex-end;min-height:440px;padding:0 9% 150px;background:linear-gradient(90deg,#0b2725f0 0%,#0f3632c7 50%,#0f363280 100%),var(--banner-photo) center 40%/cover no-repeat;color:#fff}
+.has-video-header .about-hero{margin-top:calc(var(--top-h,122px) * -1);padding-top:calc(var(--top-h,122px) + 40px)}
+.about-hero:before{content:'';position:absolute;inset:0 0 auto;height:calc(var(--top-h,122px) + 120px);background:linear-gradient(180deg,#061c19b3,#061c1900);pointer-events:none}
+.about-hero-copy{position:relative;max-width:720px}
+.about-hero h1{margin:0 0 12px;font-family:Georgia,serif;font-weight:400;font-size:clamp(38px,5vw,60px);line-height:1.1;color:#fff;animation:banner-rise .7s var(--ease-out) both}
+.about-hero p{margin:0;font-size:16px;color:#d6e7e3;animation:banner-rise .7s .12s var(--ease-out) both}
+.about-hero .banner-label{animation:banner-rise .7s var(--ease-out) both}
+.about-shell{position:relative;z-index:2;display:grid;grid-template-columns:300px minmax(0,1fr);max-width:1240px;margin:-100px auto 90px;background:#fff;border-radius:6px;box-shadow:0 24px 60px #164d481f}
+.about-menu{display:flex;flex-direction:column;padding:34px 0;border-right:1px solid var(--line);position:sticky;top:110px;align-self:start}
+.about-menu a{display:flex;justify-content:space-between;align-items:center;padding:16px 34px 16px 40px;font-size:15px;line-height:1.4;color:var(--deep);text-decoration:none;border-left:4px solid transparent;transition:background .25s,color .25s,border-color .25s,padding .25s}
+.about-menu a:hover{background:var(--soft);color:var(--primary)}
+.about-menu a[aria-current="true"]{background:var(--primary);color:#fff;border-left-color:var(--deep);font-weight:600}
+.about-menu-divider{height:1px;margin:14px 34px 10px 40px;background:var(--line)}
+.about-menu-link{font-size:13.5px!important;color:var(--muted)!important}
+.about-menu-link:hover{color:var(--primary)!important}
+.about-panels{padding:50px 56px 60px;min-width:0}
+.about-panel{outline:none}
+.about-panel+.about-panel{margin-top:60px}
+.js-about .about-panel+.about-panel{margin-top:0}
+.js-about .about-panel[hidden]{display:none}
+.js-about .about-panel.is-entering{animation:about-in .45s var(--ease-out)}
+@keyframes about-in{from{opacity:0;transform:translateY(12px)}}
+.about-panel h2{margin:0 0 26px;font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,3.4vw,42px);line-height:1.2;color:var(--primary)}
+.about-panel p{max-width:72ch;margin:0 0 18px;font-size:15.5px;line-height:1.85;color:var(--ink)}
+.about-panel .about-lead{font-size:18px;line-height:1.75;color:var(--deep)}
+.about-figure{margin:0 0 30px}
+.about-figure img{display:block;width:100%;max-height:440px;object-fit:cover;border-radius:4px}
+.about-figure figcaption{margin-top:10px;padding-left:12px;border-left:2px solid var(--primary);font-size:13px;color:var(--muted)}
+.about-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.about-facts div{padding:20px;border-radius:14px;background:var(--soft);border:1px solid var(--line)}
+.about-facts strong{display:block;font-size:26px;color:var(--primary)}
+.about-facts span{font-size:12.5px;color:var(--muted)}
+.about-purpose{display:grid;gap:14px;margin:26px 0 0;padding:0;list-style:none}
+.about-purpose li{display:flex;gap:20px;padding:22px 24px;border-radius:16px;border:1px solid var(--line);transition:border-color .25s,box-shadow .25s,transform .25s var(--ease-out)}
+.about-purpose li:hover{border-color:var(--primary);box-shadow:0 12px 30px #164d4814;transform:translateY(-2px)}
+.about-purpose li>span{flex-shrink:0;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700}
+.about-purpose h3{margin:2px 0 6px;font-size:18px;color:var(--deep)}
+.about-purpose p{margin:0;font-size:15px}
+.about-message{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;align-items:start}
+.about-person{margin:0;text-align:center;position:sticky;top:120px}
+.about-person img{display:block;width:180px;height:180px;margin:0 auto 16px;border-radius:50%;object-fit:cover;object-position:center top;border:5px solid #fff;box-shadow:0 0 0 3px var(--primary),0 12px 30px #164d4826}
+.about-person strong{display:block;font-size:17px;color:var(--deep)}
+.about-person span{display:block;margin-top:4px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.about-message blockquote{margin:0 0 22px;padding:18px 22px;border-left:4px solid var(--primary);border-radius:0 12px 12px 0;background:var(--soft);font-family:Georgia,serif;font-size:20px;line-height:1.5;color:var(--deep)}
+.about-message cite{display:block;margin-top:6px;font-family:inherit;font-style:normal;font-size:13px;color:var(--muted)}
+@media(max-width:1000px){.about-shell{grid-template-columns:1fr;margin:-80px 4% 70px}.about-menu{position:static;flex-direction:row;overflow-x:auto;padding:12px;gap:8px;border-right:0;border-bottom:1px solid var(--line);scrollbar-width:none}.about-menu::-webkit-scrollbar{display:none}.about-menu a{flex-shrink:0;padding:10px 16px;border-left:0;border-radius:999px;font-size:13.5px;white-space:nowrap}.about-menu-divider{display:none}.about-panels{padding:34px 26px 40px}.about-message{grid-template-columns:1fr;gap:24px}.about-person{position:static}.about-facts{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.about-hero{min-height:360px;padding:0 6% 120px}.about-panels{padding:28px 20px 34px}.about-person img{width:150px;height:150px}}
+@media(prefers-reduced-motion:reduce){.js-about .about-panel.is-entering,.about-hero h1,.about-hero p{animation:none}}
+.about-subhead{margin:34px 0 0;font-size:20px;color:var(--deep)}
+.about-icc{position:relative;padding:34px 36px 30px;border-radius:20px;background:linear-gradient(135deg,var(--soft),#fff);border:1px solid var(--line)}
+.about-icc-badge{display:inline-block;margin-bottom:18px;padding:7px 14px;border-radius:999px;background:var(--primary);color:#fff;font-size:12px;font-weight:700;letter-spacing:.1em}
+.about-icc-motto{margin:26px 0 0!important;padding-top:20px;border-top:1px solid var(--line);font-family:Georgia,serif;font-size:21px!important;color:var(--primary)!important}
+@media(max-width:600px){.about-icc{padding:26px 22px}}
+
+/* WhatsApp "Chat with us" bubble on hover, plus a one-time peek per visit */
+.social-whatsapp>.wa-bubble{display:flex;flex-direction:column;align-items:flex-start;gap:1px;right:58px;padding:10px 16px;border-radius:14px 14px 4px 14px;background:#25d366;color:#fff;box-shadow:0 10px 26px #25d36659;line-height:1.2;white-space:nowrap;transform:translateX(8px) scale(.92);transform-origin:right center;transition:opacity .25s,transform .3s var(--ease-out)}
+.social-whatsapp>.wa-bubble strong{font-size:14px;font-weight:700}
+.social-whatsapp>.wa-bubble small{font-size:11px;opacity:.9}
+.social-whatsapp>.wa-bubble:after{content:'';position:absolute;right:-6px;bottom:8px;border:7px solid transparent;border-left-color:#25d366;border-right:0}
+.social-whatsapp:hover>.wa-bubble,.social-whatsapp:focus-visible>.wa-bubble,.social-whatsapp.is-peeking>.wa-bubble{opacity:1;transform:translateX(0) scale(1)}
+.social-whatsapp.is-peeking{animation:wa-nudge 1.2s ease-in-out 2}
+@keyframes wa-nudge{0%,100%{transform:none}30%{transform:translateX(-4px) rotate(-8deg)}60%{transform:translateX(-4px) rotate(8deg)}}
+@media(max-width:760px){.social-whatsapp>.wa-bubble{right:48px;padding:8px 12px}.social-whatsapp>.wa-bubble strong{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.social-whatsapp.is-peeking{animation:none}.social-whatsapp>.wa-bubble{transition:none}}
+
+/* ==========================================================================
+   Humanised type and colour layer (loaded last on every page)
+   Calm institutional palette taken from the logo's greens, a bookish serif
+   for headings, a humanist sans for reading, sentence-case labels, fewer effects.
+   ========================================================================== */
+:root{
+  --paper:#ffffff;
+  --soft:#f2f6f4;
+  --primary:#17766c;
+  --deep:#123f3a;
+  --ink:#1e2b28;
+  --muted:#56635f;
+  --line:#dbe5e0;
+  --accent:#17766c;
+  --gold:#17766c;
+  --sage:#a8cbc3;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+}
+
+/* Typefaces */
+body{font-family:var(--sans);color:var(--ink);font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h1 em,.moment strong,.about-hero h1,.about-icc-motto,.about-message blockquote,.about-panel h2,.admissions h3,.brand strong,.campus-detail h3,.card-body h3,.care-list h3,.contact-number,.dedicated-page .page-title,.enquiry-card h2,.enquiry-cta h3,.help-box h3,.hero-film h1,.inner-banner h1,.page-next h3,.people-directory h3,.phone-top,.programme-row strong,.reading-list h3,.resource-grid h3,.section-menu h3,.study-disciplines h3,.svs-admit h2,.svs-at-glance h3,.svs-at-glance strong,.svs-legacy h2,.welcome h2 em,.inner-content .detail-block h2,.inner-content .help-card h3,.popular-panel h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em}
+h3,h4,.admit-card h3,.about-purpose h3,.about-subhead,.department-name,.leader-profile h3{font-family:var(--sans)}
+.people-directory .leader-profile h3{font-family:var(--serif);font-weight:500}
+.hero-film h1{font-weight:600;letter-spacing:-.015em}
+.inner-content .detail-block h2,.about-panel h2,.svs-admit h2,.svs-legacy h2{font-weight:500}
+p,li{line-height:1.7}
+
+/* Labels and kickers: sentence case, no wide tracking */
+.section-label,.eyebrow,.banner-label,.admit-label,.legacy-stats span,.footer-contact h4,.help-card .section-label,.enquiry-cta .section-label,.about-icc-badge,.hero-film .hero-copy>span,.hero-film .hero-copy>p:first-child,.photo-label,.utility{text-transform:none;letter-spacing:0}
+.section-label,.eyebrow,.admit-label,.help-card .section-label,.enquiry-cta .section-label{font-size:15px;font-weight:600;color:var(--primary)}
+.banner-label{padding:0;margin-bottom:14px;border:0;border-radius:0;background:none;backdrop-filter:none;font-size:16px;font-weight:500;color:#dbe9e5}
+.banner-label:before{content:'';display:inline-block;width:28px;height:1px;margin-right:10px;vertical-align:middle;background:currentColor;opacity:.7}
+.admit-label{color:var(--sage)}
+.legacy-stats span{font-size:14px;font-weight:500;color:#c3d8d3}
+.footer-contact h4{font-size:15px;font-weight:600;color:var(--deep)}
+.about-icc-badge{padding:0;background:none;color:var(--primary);font-size:15px;font-weight:600}
+
+/* Buttons: sentence case, plain weight, modest corners */
+.button,.admit-primary,.admit-secondary,.enquiry-submit,.enquiry-cta .button,#site-header .button.small{text-transform:none;letter-spacing:0;font-weight:600}
+#site-header .button.small{font-size:14px;border-radius:6px;padding:11px 18px}
+.admit-primary,.admit-secondary{font-size:15px;border-radius:6px}
+.enquiry-submit{font-size:16px;border-radius:6px}
+
+/* Accent colour: the logo's teal on light, soft sage on dark. No neon mint. */
+.svs-legacy h2 span{color:#fff;font-style:italic}
+.legacy-stats svg{stroke:var(--sage)}
+.legacy-stats strong{font-family:var(--serif);font-weight:500;letter-spacing:-.01em}
+.admit-toggle{background:#ffffff12;border-color:#ffffff29;backdrop-filter:none}
+.admit-thumb{background:#fff}
+.admit-toggle button{font-weight:600;color:#ffffffb3}
+.admit-toggle button[aria-selected="true"]{color:var(--deep)}
+.enquiry-interest input:checked+span{background:#fff;border-color:#fff;color:var(--deep)}
+.enquiry-field input:focus,.enquiry-field textarea:focus{border-bottom-color:#fff}
+.enquiry-submit.is-ready{background:#fff;color:var(--deep)}
+.enquiry-submit.is-ready:hover{background:#e6f0ed}
+.enquiry-direct a:hover,.enquiry-direct a:focus-visible{background:var(--sage)}
+.enquiry-done a{color:#fff;text-decoration:underline}
+.enquiry-cta .section-label{color:var(--sage)}
+.enquiry-cta .button{background:#fff;color:var(--deep)}
+.enquiry-cta .button:hover{background:#e6f0ed;color:var(--deep)}
+
+/* Calmer shapes: smaller radii, lighter shadows, fewer ornaments */
+.admit-card{border-radius:10px;box-shadow:0 12px 30px #0003}
+.admit-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px #0004}
+.admit-rule{display:none}
+.admit-card h3{margin-bottom:12px;font-size:21px;font-weight:600}
+.admit-badge{width:60px;height:60px;top:-30px;border-width:3px}
+.footer-contact{border-radius:10px;box-shadow:none}
+.inner-content .page-next.help-card,.about-icc,.about-facts div,.about-purpose li{border-radius:10px}
+.inner-figure .inner-photo{border-radius:8px;box-shadow:none}
+.people-directory>.leader-profile{border-radius:10px;box-shadow:none}
+.people-directory>.leader-profile:hover{box-shadow:0 10px 26px #164d4814;transform:translateY(-3px)}
+.section-menu.popular-panel{border-radius:10px;box-shadow:none}
+.enquiry-card{border-radius:12px}
+.about-purpose li>span{width:auto;height:auto;border-radius:0;background:none;color:var(--primary);font-family:var(--serif);font-size:26px;font-weight:500;line-height:1}
+.about-purpose li:hover{transform:none;box-shadow:none}
+.about-message blockquote{border-radius:0;background:none;padding:4px 0 4px 20px;font-style:italic}
+.inner-content .brochure-links a{border-radius:6px}
+.inner-content .brochure-links a:hover{transform:none}
+.social-control{box-shadow:0 2px 8px #164d4818}
+.social-control:hover,.social-control:focus-visible{transform:translateX(-2px)}
+
+/* Readable body copy */
+.inner-content .detail-block p,.about-panel p,.help-card p,.admit-card p,.footer-contact p{color:var(--ink)}
+.admit-card p,.footer-contact p,.about-figure figcaption,.inner-figure figcaption{color:var(--muted)}
+.svs-legacy>div>p,.inner-banner.has-photo p,.about-hero p{color:#dbe9e5}
+/* Small labels read as ordinary text: real sizes, no wide tracking */
+.utility,.utility>span{font-size:13px;letter-spacing:0}
+.utility a{font-size:13px}
+.eyebrow,.hero-film .eyebrow{font-size:15px;font-weight:600;letter-spacing:0;text-transform:none}
+.hero-film .eyebrow{font-size:17px;font-weight:500;max-width:none;color:#e4efec}
+.photo-label,.card-image>span,.elastic-gallery .card-image>span{font-size:13px;letter-spacing:0;font-weight:600}
+.discipline-strip>span,.resource-grid span,.notice-item small,.moment small,.hospital-photo figcaption,.scroll-cue,.themes>span,.svs-at-glance>div:first-child>span{font-size:13px;letter-spacing:0}
+.programme-row>span{font-size:13px;letter-spacing:0;text-transform:none}
+.status{font-size:13px;letter-spacing:0;border-radius:4px}
+#site-header .nav-dropdown a,#site-header nav{letter-spacing:0}
+#nav>a,#nav>details>summary{font-size:15px}
+.legacy-stats span{letter-spacing:0}
+.utility button{font-size:13px;letter-spacing:0}

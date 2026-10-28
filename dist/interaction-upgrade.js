@@ -7,9 +7,12 @@ document.querySelectorAll('.section-menu').forEach(aside=>{aside.classList.add('
 const icons={whatsapp:'<path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.8A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="M8 7.5c.5 4 3 6.5 7 7l1-2-2-1-1 1c-1.5-.5-2.5-1.5-3-3l1-1-1-2Z"/>',instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>',facebook:'<path d="M14 21v-8h3l.5-4H14V7c0-1 .5-2 2-2h2V1h-3c-4 0-6 2-6 6v2H6v4h3v8"/>',linkedin:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5c0-1.9 1.1-3 2.6-3S17 11.6 17 13.5V17"/>',search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',up:'<path d="M12 21V3m-7 7 7-7 7 7"/>'};
 const svg=name=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 const rail=document.createElement('aside');rail.className='social-rail';rail.setAttribute('aria-label','Social links and page tools');
-const socialLinks={instagram:'https://www.instagram.com/svs.groupofinstitutions/',facebook:'https://www.facebook.com/svsgroupofinstitutionsmahabubnagar',linkedin:'https://www.linkedin.com/company/svs-group-of-institutions-mahabubnagar/'};
+/* PLACEHOLDER WhatsApp number (dummy, not a real line). Replace with the institution's official number before launch: country code + number, digits only. */
+const whatsappNumber='910000000000';
+const whatsappMessage='Hello SVS, I would like to know more about admissions.';
+const socialLinks={whatsapp:whatsappNumber?`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`:'',instagram:'https://www.instagram.com/svs.groupofinstitutions/',facebook:'https://www.facebook.com/svsgroupofinstitutionsmahabubnagar',linkedin:'https://www.linkedin.com/company/svs-group-of-institutions-mahabubnagar/'};
 const labels={whatsapp:'WhatsApp',instagram:'Instagram',facebook:'Facebook',linkedin:'LinkedIn'};
-['whatsapp','instagram','facebook','linkedin'].forEach(name=>{const url=socialLinks[name];const control=document.createElement(url?'a':'button');control.className='social-control social-'+name;control.setAttribute('aria-label',url?labels[name]+' (opens in a new tab)':labels[name]);control.innerHTML=svg(name)+`<span>${labels[name]}</span>`;if(url){control.href=url;control.target='_blank';control.rel='noopener noreferrer'}else control.onclick=()=>show('Connect with SVS','<p>For assistance, contact the college office on <a href="tel:08542227902">08542-227902</a> or <a href="mailto:svsmc_mbnr@yahoo.co.in">svsmc_mbnr@yahoo.co.in</a>.</p><p>The official WhatsApp number will be available here once confirmed.</p>','CONTACT SVS');rail.append(control)});
+['whatsapp','instagram','facebook','linkedin'].forEach(name=>{const url=socialLinks[name];const control=document.createElement(url?'a':'button');control.className='social-control social-'+name;control.setAttribute('aria-label',url?labels[name]+' (opens in a new tab)':labels[name]);control.innerHTML=svg(name)+(name==='whatsapp'?'<span class="wa-bubble"><strong>Chat with us</strong><small>on WhatsApp</small></span>':`<span>${labels[name]}</span>`);if(name==='whatsapp')control.setAttribute('aria-label',url?'Chat with us on WhatsApp (opens in a new tab)':'Chat with us');if(url){control.href=url;control.target='_blank';control.rel='noopener noreferrer'}else control.onclick=()=>show('Connect with SVS','<p>For assistance, contact the college office on <a href="tel:08542227902">08542-227902</a> or <a href="mailto:svsmc_mbnr@yahoo.co.in">svsmc_mbnr@yahoo.co.in</a>.</p><p>The official WhatsApp number will be available here once confirmed.</p>','Contact SVS');rail.append(control)});const wa=rail.querySelector('.social-whatsapp');if(wa&&!sessionStorage.getItem('svs-wa-peek')){setTimeout(()=>{wa.classList.add('is-peeking');sessionStorage.setItem('svs-wa-peek','1');setTimeout(()=>wa.classList.remove('is-peeking'),3500)},4000)}
 const top=document.createElement('button');top.className='back-to-top';top.setAttribute('aria-label','Back to top');top.innerHTML=svg('up');top.onclick=()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});document.body.append(rail,top);
 const visibility=()=>top.classList.toggle('is-visible',window.scrollY>350);window.addEventListener('scroll',visibility,{passive:true});visibility();
 })();
@@ -67,13 +70,13 @@ if(document.querySelector('[data-enquiry-autoopen]')&&!sessionStorage.getItem('s
 const header=document.querySelector('#site-header');if(!header)return;
 const search=header.querySelector('.site-search');
 if(search)search.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
-const hero=document.querySelector('.hero-film');if(!hero)return;
+const hero=document.querySelector('.hero-film,.about-hero');if(!hero)return;
 const root=document.documentElement;root.classList.add('has-video-header');const logo=header.querySelector('.svs-logo');if(logo)logo.src='assets/svs-logo-transparent.png';
 const utility=document.querySelector('.utility');const measure=()=>{root.style.setProperty('--header-h',header.offsetHeight+'px');root.style.setProperty('--top-h',(header.offsetHeight+(utility?.offsetHeight||0))+'px')};
-const update=()=>{const solid=hero.getBoundingClientRect().bottom<=header.offsetHeight+20||header.querySelector('#nav.open');root.classList.toggle('header-solid',!!solid)};
+const edge=document.querySelector('.about-shell');const update=()=>{const limit=edge?edge.getBoundingClientRect().top:hero.getBoundingClientRect().bottom;const solid=limit<=header.offsetHeight+20||header.querySelector('#nav.open');root.classList.toggle('header-solid',!!solid)};
 measure();update();
 addEventListener('resize',()=>{measure();update()},{passive:true});
-addEventListener('scroll',update,{passive:true});
+addEventListener('scroll',update,{passive:true});addEventListener('load',()=>{measure();update()});
 header.querySelector('#menu')?.addEventListener('click',()=>setTimeout(update,0));
 })();
 
@@ -90,4 +93,19 @@ const toggle=document.querySelector('.admit-toggle');if(!toggle)return;
 const tabs=Array.from(toggle.querySelectorAll('[role="tab"]'));
 const select=tab=>{tabs.forEach(t=>{const on=t===tab;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;const panel=document.getElementById(t.getAttribute('aria-controls'));panel.hidden=!on;if(on){panel.classList.remove('is-entering');void panel.offsetWidth;panel.classList.add('is-entering')}});toggle.classList.toggle('is-pg',tab.id==='admit-tab-pg')};
 tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>select(tab));tab.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(next);next.focus()}})});
+})();
+
+/* About page: side menu switches between sections, with a shareable #hash */
+(()=>{
+const menu=document.querySelector('.about-menu');if(!menu)return;
+const links=Array.from(menu.querySelectorAll('a[aria-controls]'));
+const panels=links.map(a=>document.getElementById(a.getAttribute('aria-controls')));
+document.documentElement.classList.add('js-about');
+const show=(id,focus)=>{const target=panels.find(p=>p.id===id)||panels[0];
+panels.forEach(p=>{const on=p===target;p.hidden=!on;if(on){p.classList.remove('is-entering');void p.offsetWidth;p.classList.add('is-entering')}});
+links.forEach(a=>a.setAttribute('aria-current',String(a.getAttribute('aria-controls')===target.id)));
+if(focus){target.focus({preventScroll:true});const top=document.querySelector('.about-shell').getBoundingClientRect().top;if(top<0||top>innerHeight*.6)scrollTo({top:scrollY+top-110,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}};
+links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('aria-controls');history.replaceState(null,'','#'+id);show(id,true)}));
+addEventListener('hashchange',()=>show(location.hash.slice(1),true));
+show(location.hash.slice(1),false);
 })();

@@ -1,4 +1,4 @@
-document.querySelectorAll('.department-card').forEach(card=>card.addEventListener('click',()=>{const title=card.querySelector('.department-name').textContent;show(title,`<h3>Head of Department</h3><p>${card.dataset.head}</p><p>For departmental enquiries, contact the college office.</p><a class="button" href="contact.html">Contact the college →</a>`,'SVS MEDICAL COLLEGE')}));
+document.querySelectorAll('.department-card').forEach(card=>card.addEventListener('click',()=>{const title=card.querySelector('.department-name').textContent;show(title,`<h3>Head of Department</h3><p>${card.dataset.head}</p><p>For departmental enquiries, contact the college office.</p><a class="button" href="contact.html">Contact the college →</a>`,'SVS Medical College')}));
 
 (()=>{const directory=document.querySelector('.department-directory');if(!directory)return;
 const groups={'pre-clinical':['Anatomy','Physiology','Biochemistry'],'para-clinical':['Pharmacology','Pathology','Microbiology','Forensic Medicine','Community Medicine']};
