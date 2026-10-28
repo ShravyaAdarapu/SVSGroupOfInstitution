@@ -46,7 +46,7 @@ phoneInput.addEventListener('input',()=>{phoneInput.value=phoneInput.value.repla
 const refresh=()=>{const ok=form.checkValidity();submit.disabled=!ok;submit.classList.toggle('is-ready',ok)};
 form.addEventListener('input',refresh);form.addEventListener('change',refresh);
 let opener=null;
-const open=()=>{opener=document.activeElement;form.hidden=false;done.hidden=true;refresh();modal.showModal();document.documentElement.classList.add('enquiry-open');setTimeout(()=>form.elements.name.focus(),60)};
+const open=interest=>{opener=document.activeElement;form.hidden=false;done.hidden=true;if(interest){const r=form.querySelector(`input[name="interest"][value="${interest}"]`);if(r)r.checked=true}refresh();modal.showModal();document.documentElement.classList.add('enquiry-open');setTimeout(()=>form.elements.name.focus(),60)};
 const close=()=>{modal.classList.add('is-closing');setTimeout(()=>{modal.classList.remove('is-closing');modal.close()},matchMedia('(prefers-reduced-motion: reduce)').matches?0:180)};
 modal.addEventListener('close',()=>{document.documentElement.classList.remove('enquiry-open');opener?.focus?.()});
 modal.addEventListener('cancel',e=>{e.preventDefault();close()});
@@ -58,6 +58,36 @@ const d=Object.fromEntries(new FormData(form));
 const body=[`Name: ${d.name.trim()}`,`Mobile: +91 ${d.phone}`,`Interested in: ${d.interest}`,'',d.question.trim()||'I would like to know more about admissions.'].join('\n');
 location.href=`mailto:${office}?subject=${encodeURIComponent('Admissions enquiry: '+d.interest)}&body=${encodeURIComponent(body)}`;
 form.hidden=true;done.hidden=false;done.querySelector('button').focus()});
-document.querySelectorAll('#site-header a.button.small[href="admissions.html"],[data-enquiry]').forEach(trigger=>trigger.addEventListener('click',e=>{e.preventDefault();open()}));
-if(document.querySelector('[data-enquiry-autoopen]')&&!sessionStorage.getItem('svs-enquiry-shown')){sessionStorage.setItem('svs-enquiry-shown','1');setTimeout(open,700)}
+document.querySelectorAll('#site-header a.button.small[href="admissions.html"],[data-enquiry]').forEach(trigger=>trigger.addEventListener('click',e=>{e.preventDefault();open(trigger.dataset.interest)}));
+if(document.querySelector('[data-enquiry-autoopen]')&&!sessionStorage.getItem('svs-enquiry-shown')){sessionStorage.setItem('svs-enquiry-shown','1');setTimeout(()=>open(),700)}
+})();
+
+/* Header polish: search icon that matches the nav, and a transparent header over the homepage video */
+(()=>{
+const header=document.querySelector('#site-header');if(!header)return;
+const search=header.querySelector('.site-search');
+if(search)search.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+const hero=document.querySelector('.hero-film');if(!hero)return;
+const root=document.documentElement;root.classList.add('has-video-header');const logo=header.querySelector('.svs-logo');if(logo)logo.src='assets/svs-logo-transparent.png';
+const utility=document.querySelector('.utility');const measure=()=>{root.style.setProperty('--header-h',header.offsetHeight+'px');root.style.setProperty('--top-h',(header.offsetHeight+(utility?.offsetHeight||0))+'px')};
+const update=()=>{const solid=hero.getBoundingClientRect().bottom<=header.offsetHeight+20||header.querySelector('#nav.open');root.classList.toggle('header-solid',!!solid)};
+measure();update();
+addEventListener('resize',()=>{measure();update()},{passive:true});
+addEventListener('scroll',update,{passive:true});
+header.querySelector('#menu')?.addEventListener('click',()=>setTimeout(update,0));
+})();
+
+/* Homepage: counting stats and the UG / PG admissions switch */
+(()=>{
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const counters=document.querySelectorAll('[data-count],[data-count-since]');
+const target=el=>el.dataset.countSince?new Date().getFullYear()-Number(el.dataset.countSince):Number(el.dataset.count);
+const render=(el,n)=>{el.textContent=n.toLocaleString('en-IN')+(el.dataset.suffix||'')};
+const run=el=>{const end=target(el);if(reduced){render(el,end);return}const start=performance.now(),dur=1400;const step=t=>{const p=Math.min((t-start)/dur,1);render(el,Math.round(end*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);setTimeout(()=>render(el,end),dur+250)};
+counters.forEach(c=>render(c,target(c)));
+if(counters.length&&!reduced){if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){run(e.target);io.unobserve(e.target)}}),{threshold:.4});counters.forEach(c=>io.observe(c))}else counters.forEach(c=>render(c,target(c)))}
+const toggle=document.querySelector('.admit-toggle');if(!toggle)return;
+const tabs=Array.from(toggle.querySelectorAll('[role="tab"]'));
+const select=tab=>{tabs.forEach(t=>{const on=t===tab;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;const panel=document.getElementById(t.getAttribute('aria-controls'));panel.hidden=!on;if(on){panel.classList.remove('is-entering');void panel.offsetWidth;panel.classList.add('is-entering')}});toggle.classList.toggle('is-pg',tab.id==='admit-tab-pg')};
+tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>select(tab));tab.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const next=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];select(next);next.focus()}})});
 })();

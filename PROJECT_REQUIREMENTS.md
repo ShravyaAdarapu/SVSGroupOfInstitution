@@ -3,8 +3,9 @@
 Client-facing medical institution website. Preserve these decisions in future updates.
 
 - White and one consistent pale teal background; teal controls. Original teal/gold logo retained. Compact header and section spacing; human, direct language; genuine campus media.
-- Homepage: existing background video hero, short introduction, elastic three-college gallery. Detailed content belongs on separate pages.
-- No heritage/tree section, quicklink strip, statistics strip, hero pause button, hero bottom captions, or film play button.
+- Homepage: full-height background video hero with the utility strip and header layered transparently over it (header turns solid after the video), short introduction, stats band, elastic three-college gallery, and UG/PG admissions cards whose Enquire buttons open the enquiry pop-up. Detailed content belongs on separate pages.
+- Stats band (client request 28 October 2026) uses only figures from client material: medical education since 1999 (year count computed live), 3 colleges, 19 departments, 1,000+ teaching beds, 39 clinical units, 2,300+ daily outpatients. Keep MBBS/PG seat numbers off it until the institution verifies current intake.
+- No heritage/tree section, quicklink strip, hero pause button, hero bottom captions, or film play button.
 - Institutions dropdown contains Medical, Dental and Nursing. Navigation follows the client's second reference recording (28 October 2026): solid teal pill on the current page and a pill that fades in on the hovered item; compact dropdowns aligned under their item with links revealed one after another; side flyouts where useful (Academics > Departments & HODs > Pre-clinical, Para-clinical, Clinical, which open the filtered departments page). Keep keyboard access, hover-intent close delay and the mobile tap menu.
 - Inner pages share the homepage's human feel: real campus photo banners with a short label (no stock photos; Dental uses a plain teal banner until real dental photos are supplied), captioned photos, warm second-person copy, and a closing help card with the confirmed general office contacts.
 - No breadcrumbs anywhere. No visitor-facing source labels or references to the brochure, project brief or requirement documents. Keep provenance in internal project records, not website copy.
