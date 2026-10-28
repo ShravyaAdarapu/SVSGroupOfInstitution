@@ -62,3 +62,7 @@ nav details[open]:not(.is-closing) summary:after{transform:rotate(180deg) transl
 
 @media(max-width:760px){.people-directory>.leader-profile{padding:18px;gap:16px}.people-directory .leader-portrait{width:80px;height:80px}.social-rail{bottom:80px}.social-control{width:38px;height:38px}.back-to-top{right:10px;bottom:18px;width:42px;height:42px}.smart-pill{right:62px}}
 @media(prefers-reduced-motion:reduce){.people-directory>.leader-profile,.people-directory>.leader-profile:before,.people-directory .leader-portrait,.back-to-top,nav summary:after{transition:none!important}.people-directory>.leader-profile:hover{transform:none}.popular-list{scroll-behavior:auto}#site-header nav details.is-closing .nav-dropdown{animation:none}}
+.social-linkedin{color:#0a66c2;background:#e8f1fa}
+.social-linkedin:hover,.social-linkedin:focus-visible{background:#0a66c2;color:#fff}
+a.social-control{text-decoration:none}
+.social-control:not(.social-whatsapp):not(.social-instagram):not(.social-facebook):not(.social-linkedin):hover{background:var(--primary);color:#fff}
