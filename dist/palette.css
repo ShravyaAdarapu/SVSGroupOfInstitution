@@ -1,0 +1,34 @@
+/* One quiet palette across all pages: white and a pale teal wash. */
+:root{--paper:#fff;--soft:#f0f6f4;--primary:#167f77;--deep:#164d48;--ink:#263f3a;--muted:#697b74;--line:#dce7e1;--accent:#167f77;--gold:#167f77}
+body,main,.inner-layout,.welcome,.photo-story,.disclosures,#institutions,.page-wayfinding{background:#fff}
+.home-introduction,.application-guide,#campus,.parent-note,.admissions,.inner-banner,.section-menu,.inner-content .programme-row,.study-disciplines,.notice-section,.svs-at-glance{background:var(--soft)}
+.campus-detail,.admissions form,.portal-links .store-buttons button{background:#fff}
+.facility-tags span,.brochure-source,.print-guide,.record-link,.document button{background:var(--soft);border-color:var(--line)}
+.hospital,.help-box{background:var(--deep)}
+footer{background:var(--soft);color:var(--ink)}
+.footer-main h4{color:var(--deep)}
+.footer-main p,.footer-main a:not(.brand),.footer-main button,.footer-bottom,.inner-copyright{color:var(--muted)}
+.footer-bottom,.inner-copyright{border-color:var(--line)}
+.footer-main a:hover,.footer-main button:hover{color:var(--primary)}
+.admissions form .button,#site-header .button.small,.hero-film .button,.help-box .button{background:var(--primary);color:#fff}
+.button:hover,#site-header .button.small:hover,.hero-film .button:hover{background:var(--deep);color:#fff}
+.campus-tabs button[aria-selected=true]{background:#fff;border-left-color:var(--primary)}
+.welcome-note .text-link,.reading-list>a,.portal-links>button{border-color:var(--line)}
+#site-header,.inner-page #site-header{min-height:86px;padding-top:3px;padding-bottom:3px}
+#site-header .svs-logo{width:150px;height:auto}
+main>.section:not(.hero){padding-top:60px;padding-bottom:60px}
+.home-introduction{padding-top:34px;padding-bottom:30px;gap:60px}
+.home-introduction h2{font-size:32px}
+.home-introduction .section-label{margin-bottom:12px}
+#institutions{padding-top:48px;padding-bottom:48px}
+.section-heading{margin-bottom:30px}
+.page-wayfinding{padding-top:18px;padding-bottom:18px}
+@media(max-width:760px){
+ #site-header,.inner-page #site-header{min-height:70px;padding-top:3px;padding-bottom:3px}
+ #site-header .svs-logo{width:120px}
+ main>.section:not(.hero){padding-top:42px;padding-bottom:42px}
+ .home-introduction{padding-top:28px;padding-bottom:26px;gap:14px}
+ .home-introduction h2{font-size:29px}
+ #institutions{padding-top:34px;padding-bottom:36px}
+ .page-wayfinding{padding-top:16px;padding-bottom:16px}
+}
