@@ -1,4 +1,6 @@
 /* Main navigation must paint above sticky section navigation and page content. */
+/* Match white labels to the teal top-level pill, overriding generic link hover. */
+#site-header #nav>a:hover,#site-header #nav>a:focus-visible,#site-header #nav>details:hover>summary,#site-header #nav>details[open]:not(.is-closing)>summary,#site-header #nav>details>summary:focus-visible,#site-header #nav>a[data-nav-current],#site-header #nav>details>summary[data-nav-current]{color:#fff;text-shadow:none}
 body #site-header{z-index:100!important;overflow:visible}
 @media(min-width:1101px){body #site-header #nav{overflow:visible}#site-header .nav-dropdown,#site-header .nav-flyout{z-index:101}}
 #site-header nav .administration-toggle{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:10px 14px;border:0;border-radius:9px;font:inherit;font-size:13.5px;color:var(--ink);text-align:left;white-space:nowrap;background:transparent;cursor:pointer}
