@@ -7,7 +7,7 @@
 .elastic-gallery .card-image:after{background:linear-gradient(0deg,#0d302df7 0%,#0d302dc9 35%,#0d302d0a 80%)}
 @media(max-width:760px){#institutions .elastic-gallery{height:auto}#institutions .elastic-card{min-height:270px}#institutions .elastic-card.is-active{min-height:450px}}
 
-#institutions .elastic-gallery{height:630px}
+#institutions .elastic-gallery{height:560px}
 .college-study-switch{display:flex;gap:0;border-bottom:1px solid #ffffff55;margin-top:20px;width:fit-content;max-width:100%}
 .college-study-switch button{font:inherit;font-size:12px;font-weight:500;color:#dfebe7;background:none;border:0;border-bottom:2px solid transparent;padding:10px 10px;cursor:pointer;white-space:nowrap}
 .college-study-switch button[aria-selected=true]{color:#fff;border-bottom-color:#fff}
@@ -17,4 +17,4 @@
 .college-course-panel[hidden]{display:none}
 .college-course-panel strong{font-size:19px;color:white}.college-course-panel>span{font-size:12px;color:#e0ece5}
 .college-course-panel>a{width:100%;font-size:12px;color:white;text-underline-offset:4px;margin-top:4px}
-@media(max-width:760px){#institutions .elastic-gallery{height:auto}#institutions .elastic-card.is-active{min-height:520px}.college-study-switch button{padding:10px 9px}}
+@media(max-width:760px){#institutions .elastic-gallery{height:auto}#institutions .elastic-card.is-active{min-height:480px}.college-study-switch button{padding:10px 9px}}

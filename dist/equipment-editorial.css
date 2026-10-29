@@ -1,0 +1,20 @@
+#clinical-facilities.equipment-editorial{display:block;width:100%;padding:0 0 32px;margin:0;min-width:0}
+.equipment-editorial-heading{position:static;display:block;background:none;padding:0 0 24px;border:0;min-height:0;color:var(--deep)}
+.equipment-editorial-heading .section-label{margin-bottom:10px}
+.equipment-editorial-heading h2{font-size:clamp(28px,2.6vw,39px);line-height:1.22;margin:0 0 14px;max-width:none}
+.equipment-editorial-heading p{max-width:75ch;margin:0;font-size:16px;line-height:1.75}
+.equipment-editorial-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:stretch}
+.equipment-editorial .equipment-photo-sequence{position:relative;margin:0;min-height:370px;border-radius:4px;overflow:hidden;background:var(--soft)}
+.equipment-editorial .equipment-photo-sequence img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.equipment-editorial .equipment-photo-sequence img.is-visible{opacity:1}
+.equipment-editorial .equipment-photo-sequence figcaption{position:absolute;z-index:1;bottom:0;left:0;right:0;margin:0;padding:30px 16px 13px;font-size:13px;line-height:1.5;color:white;background:linear-gradient(transparent,#103f36c9)}
+.equipment-editorial-list>section{display:flex;gap:14px;padding:17px 0;border-top:1px solid var(--line)}
+.equipment-editorial-number{color:#40867c;font-size:13px;padding-top:4px;flex:0 0 22px}
+.equipment-editorial-list h3{font-family:inherit;font-size:19px;font-weight:600;letter-spacing:0;line-height:1.4;margin:0 0 7px;color:var(--deep)}
+.equipment-editorial-list p{font-size:15px;line-height:1.7;margin:0;color:var(--muted)}
+.equipment-editorial-links{display:flex;gap:10px 24px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--line)}
+.equipment-editorial-links a{font-size:14px;font-weight:600;color:var(--primary);text-decoration:underline;text-underline-offset:5px}
+.equipment-editorial-links a:hover{color:var(--deep)}
+@media(max-width:1000px){.equipment-editorial-body{grid-template-columns:1fr;gap:22px}.equipment-editorial .equipment-photo-sequence{min-height:260px;max-height:300px}.equipment-editorial-heading h2{max-width:none}}
+@media(max-width:600px){.equipment-editorial-heading{padding-bottom:20px}.equipment-editorial-heading h2{font-size:29px}.equipment-editorial .equipment-photo-sequence{min-height:240px}.equipment-editorial-list>section{padding:15px 0}.equipment-editorial-list h3{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.equipment-editorial .equipment-photo-sequence img{transition:none}}
