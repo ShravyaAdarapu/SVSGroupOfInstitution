@@ -86,3 +86,16 @@ Homepage noticeboard refinement: one persistent sticky noticeboard in a compact 
 - Notice board (29 October 2026): homepage sidebar and notices.html show 10 PLACEHOLDER notices (dummy titles, client request; only the CME/AMR notice links to a real page). Replace with real notices before launch. Each notice has data-posted="YYYY-MM-DD"; a small red "New" appears for 7 days after that date.
 - Student & parent portal is named MedCampusOS (client, 29 October 2026; page stays at smart-portal.html). Content from the brochure's Section 10: six features. Never publish the default login PIN or the helpdesk's personal mobile number; direct access problems to the college office. Campus & Infrastructure page (infrastructure.html) holds all infrastructure figures in one place.
 - No links to the old website (svsmch.com) anywhere (client, 29 October 2026). MSR Clause B.1.11 records live on msr-b111.html with local PDFs in assets/documents; 2023 results on academic-schedule.html; CME/AMR event on notices.html. Also brought over: Student Development Programs PDF (MSR item 6), 2026-27 MBBS documents & bonds PDF (MBBS page) and the CME/AMR photo (event dated 23 Aug 2024). Still missing from the college: teaching-staff list (old PDF link is 404), non-teaching staff, admitted-student list, awards (old site pages were empty).
+
+Navigation: About SVS contains Administration submenu with Educational Society, Medical College, Group & Hospital linking to local leadership sections. Rename Campus Life navigation to For Students; Contact to Contact Us throughout navigation/footer. Preserve existing About, Leadership and Committees destinations.
+
+Horizontal About menu also groups Educational Society, Medical College and Group & Hospital beneath Administration. Preserve designation-only person links within each subgroup; nested details must preserve parent open state and remain keyboard/touch accessible.
+
+
+2026-10-29: Footer Holiday List links real Dental 2026 BDS/intern and faculty/MDS downloadable PDFs from official svsids.com. Medical/Nursing approved PDFs still needed; do not substitute Dental schedule. Separate three college contact sections with call/email icons and footer anchors. Dental contacts verified on official contact page; Nursing principal office verified KNRUHS affiliated colleges directory.
+
+2026-10-29: About Administration nested menus must remain open across hover/click transitions; all horizontal About links share a centered baseline. Verified submenu selection closes menu and shows selected message.
+
+2026-10-29: Alumni main navigation and directory; profile fields name, graduation year/course, designation, workplace and city. Eight temporary fictional profiles approved by user; replace alumni-profiles.js data and stock photos before launch.
+
+2026-10-29: Committees supersedes previous grouping: use only brochure Section 7 in two normal tables (11+8 unique committees), retain original mottos/responsibilities; no extra summaries or duplicates.
