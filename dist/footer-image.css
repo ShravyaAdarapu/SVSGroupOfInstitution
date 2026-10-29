@@ -1,0 +1,7 @@
+/* A quiet campus photograph behind the shared footer. */
+body footer{position:relative;isolation:isolate;background:#f0f6f4;padding-top:30px;padding-bottom:22px}
+body footer .footer-main{padding-top:0;padding-bottom:12px}
+body footer .inner-copyright,body footer .footer-bottom{margin-top:18px;padding-top:14px;padding-bottom:0;font-size:12px}
+body footer::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(90deg,#f0f6f4 0%,#f0f6f440 45%,#f0f6f400 100%),url("assets/medical-campus.webp");background-size:cover;background-position:center 55%;background-repeat:no-repeat;opacity:.1}
+body footer .footer-main,body footer .inner-copyright,body footer .footer-bottom{position:relative}
+@media(max-width:760px){body footer::before{background-position:60% center;opacity:.07}}
