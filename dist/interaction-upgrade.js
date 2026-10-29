@@ -110,3 +110,5 @@ links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.ge
 addEventListener('hashchange',()=>show(location.hash.slice(1),true));
 show(location.hash.slice(1),false);
 })();
+/* Notice board: a red "New" tag on notices posted in the last 7 days (set data-posted="YYYY-MM-DD" on each item) */
+(()=>{const days=7,now=Date.now();document.querySelectorAll('.college-notice-list li[data-posted],.notice-archive-list li[data-posted]').forEach(li=>{const t=Date.parse(li.dataset.posted);if(!isNaN(t)&&now-t>=0&&now-t<days*864e5){li.classList.add('is-new');const link=li.querySelector('a,.notice-title');if(link&&!link.querySelector('.notice-new')){const tag=document.createElement('span');tag.className='notice-new';tag.textContent='New';link.append(' ',tag)}}})})();
