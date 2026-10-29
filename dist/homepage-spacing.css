@@ -1,0 +1,41 @@
+/* A tighter homepage rhythm; hero proportions are intentionally unchanged. */
+.homepage-content-layout{margin-top:20px;gap:22px}
+.homepage-main-content>#news{padding-bottom:16px}
+#clinical-facilities.facilities-slider{padding-bottom:12px}
+.facilities-slider-bottom{padding:10px 0 12px}
+.homepage-main-content>.svs-legacy{padding:25px 4%;margin-bottom:18px}
+.homepage-main-content>.svs-legacy h2{margin:0 0 12px}
+.homepage-main-content>.svs-legacy p{margin:0 auto 16px}
+.homepage-main-content .legacy-stats{margin-top:16px;gap:10px}
+.homepage-main-content .legacy-stats li{padding-block:12px}
+.homepage-main-content>#institutions{padding:12px 0 22px}
+.homepage-main-content .section-heading{margin-bottom:22px;gap:18px}
+.homepage-main-content .section-heading .section-label{margin-bottom:10px}
+.homepage-main-content .section-heading h2{margin-top:0;margin-bottom:0}
+.homepage-main-content .section-heading p{margin:0}
+.homepage-main-content>.homepage-photo-gallery{padding:16px 0 22px}
+.homepage-main-content .homepage-photo-gallery-heading{margin-bottom:18px}
+main>.home-alumni.alumni-horizontal{padding:24px 0 26px;margin-top:8px}
+.alumni-horizontal .alumni-showcase-heading{margin-bottom:22px}
+.alumni-horizontal .alumni-showcase-heading .section-label{margin-bottom:10px}
+.alumni-horizontal .alumni-showcase-heading h2{margin-top:0}
+body:has(.homepage-content-layout)>footer{margin-top:26px}
+@media(max-width:760px){.homepage-content-layout{margin-top:16px}.homepage-content-layout>.college-notice-list{margin-bottom:20px}.homepage-main-content>.svs-legacy{padding:22px 5%;margin-bottom:14px}.homepage-main-content .section-heading{margin-bottom:18px}.homepage-main-content>#institutions{padding:10px 0 18px}.homepage-main-content>.homepage-photo-gallery{padding:12px 0 18px}main>.home-alumni.alumni-horizontal{padding:22px 0}.alumni-horizontal .alumni-showcase-heading{margin-bottom:18px}}
+
+/* Remove wide gutters and ornamental dividers between homepage sections. */
+.homepage-content-layout{width:96%;gap:16px;margin-top:12px}
+.homepage-main-content>#news{padding-bottom:8px;border:0}
+#clinical-facilities.facilities-slider{padding-bottom:0;border:0}
+.facilities-slider-bottom{border:0;padding:5px 0 6px}
+.homepage-main-content>.svs-legacy{margin-bottom:8px}
+.homepage-main-content>#institutions{padding-top:8px;padding-bottom:12px;border:0}
+.homepage-main-content>.homepage-photo-gallery{padding-top:10px;padding-bottom:12px;border:0}
+.homepage-main-content .section-heading{margin-bottom:16px}
+main>.home-alumni.alumni-horizontal{margin-top:0;border:0;padding-top:18px;padding-bottom:20px}
+main>.home-alumni.alumni-horizontal>.home-editorial{width:96%;max-width:1600px}
+body:has(.homepage-content-layout)>footer{margin-top:12px}
+@media(max-width:760px){.homepage-content-layout{width:94%;margin-top:10px}.homepage-content-layout>.college-notice-list{margin-bottom:14px}.homepage-main-content>#news{padding-bottom:6px}.homepage-main-content>.svs-legacy{margin-bottom:6px}.homepage-main-content>#institutions{padding-block:8px 10px}.homepage-main-content>.homepage-photo-gallery{padding-block:8px 10px}.homepage-main-content .section-heading{margin-bottom:14px}}
+
+/* Thin edge spacing directly beneath the hero on every screen size. */
+main>.homepage-content-layout{width:calc(100% - 12px);max-width:none;margin:4px auto 0;gap:8px}
+@media(max-width:760px){main>.homepage-content-layout{width:calc(100% - 12px);margin-top:4px}}

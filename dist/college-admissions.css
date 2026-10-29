@@ -23,3 +23,14 @@
 #institutions .elastic-gallery .card-body h3{margin-bottom:12px}
 #institutions .elastic-gallery .is-active .card-body>p{margin-bottom:14px}
 #institutions .elastic-gallery .card-body .text-link{padding-top:12px}
+
+/* Compact college cards while allowing mobile content to grow naturally. */
+#institutions .elastic-gallery{height:440px}
+#institutions .elastic-gallery .card-body{padding:18px}
+#institutions .elastic-gallery .card-body h3{font-size:25px;margin-bottom:9px}
+#institutions .elastic-gallery .is-active .card-body>p{font-size:13px;line-height:1.55;margin-bottom:10px}
+#institutions .college-study-switch{margin-top:8px}
+#institutions .college-study-switch button{padding:8px}
+#institutions .college-course-panel{padding-top:10px;gap:3px 9px}
+#institutions .college-admission-actions{margin-top:10px}
+@media(max-width:760px){#institutions .elastic-gallery{height:auto}#institutions .elastic-gallery .elastic-card{min-height:330px}#institutions .elastic-gallery .elastic-card.is-active{min-height:390px}#institutions .elastic-gallery .card-body{padding:18px}#institutions .elastic-gallery .card-body h3{font-size:24px}#institutions .college-study-switch button{padding:8px 9px}}

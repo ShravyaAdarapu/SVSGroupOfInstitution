@@ -1,0 +1,48 @@
+/* Site-wide compact spacing, without changing hero, type size or touch targets. */
+body:not(.about-page) main>.section:not(.hero),body .inner-layout.section{padding-top:24px;padding-bottom:24px}
+body .inner-layout{column-gap:24px;row-gap:20px}
+body.inner-page .inner-banner{min-height:230px;padding-top:38px;padding-bottom:28px}
+body.inner-page .inner-banner h1{margin-bottom:14px}
+body.inner-page .inner-banner p{margin-bottom:0}
+body .inner-layout.section,body.related-about-page .inner-layout{width:96%;max-width:1600px;padding-left:0;padding-right:0}
+body .about-shell{width:96%;max-width:1600px;margin-bottom:28px}
+body .about-panels{padding:24px 22px 28px}
+body.related-about-page .inner-content{padding-top:22px}
+body.inner-page .detail-block{margin-bottom:18px;padding-bottom:16px}
+body .college-contact-section{padding-bottom:18px;margin-bottom:18px}
+body .journey-section{padding-top:16px;padding-bottom:20px;margin-bottom:10px}
+body .journey-intro{gap:24px;padding-top:22px;padding-bottom:26px}
+body .career-section{margin-bottom:24px}
+body .committee-table-section{margin-bottom:24px}
+body.inner-page .editorial-contact{margin-top:22px;padding-top:18px!important}
+body .contact-message{margin-top:12px;padding-top:20px}
+body .contact-message-intro{padding-top:22px;padding-bottom:18px;margin-bottom:20px}
+body footer{margin-top:16px;padding-top:24px;padding-bottom:18px}
+body footer .footer-main{padding-bottom:8px;gap:22px}
+body footer .inner-copyright,body footer .footer-bottom{margin-top:12px;padding-top:12px}
+body:has(.homepage-content-layout)>footer{margin-top:8px}
+/* Eliminate accumulated padding between the homepage slideshow and history. */
+body:has(.homepage-content-layout)>main{width:100%;max-width:none;margin-inline:0}
+body:has(.homepage-content-layout)>footer{max-width:none;width:100%;box-sizing:border-box}
+main>.home-alumni.alumni-horizontal>.home-editorial{width:calc(100% - 12px);max-width:none}
+main>.homepage-content-layout{margin-top:4px;padding:0}
+main>.homepage-content-layout{width:calc(100% - 12px);max-width:none;margin-left:6px;margin-right:6px;box-sizing:border-box}
+.homepage-main-content{min-width:0}
+.homepage-main-content>section{width:100%;max-width:none;box-sizing:border-box;margin-inline:0}
+.homepage-main-content>section:not(.svs-legacy){padding-inline:0}
+@media(min-width:1101px){main>.homepage-content-layout{grid-template-columns:275px minmax(0,1fr)}}
+@media(min-width:761px) and (max-width:1100px){main>.homepage-content-layout{grid-template-columns:240px minmax(0,1fr)}}
+.homepage-main-content>#news{padding:0;margin:0}
+.homepage-main-content #clinical-facilities{padding-bottom:0}
+.homepage-main-content .facilities-slider-bottom{padding:0;border:0;min-height:32px}
+.homepage-main-content>.svs-legacy{margin-top:0;margin-bottom:4px}
+.homepage-main-content>#institutions{padding-top:8px;padding-bottom:8px}
+.homepage-main-content>.homepage-photo-gallery{padding-top:8px;padding-bottom:8px}
+main>.home-alumni.alumni-horizontal{padding-top:16px;padding-bottom:16px}
+/* Give the moving alumni row room for its controls, independently of page gutters. */
+main>.home-alumni.alumni-horizontal{padding-top:24px;padding-bottom:28px}
+main>.home-alumni.alumni-horizontal>.home-editorial{width:calc(100% - 64px);max-width:none;margin-inline:auto;box-sizing:border-box}
+.alumni-horizontal .alumni-moving-row{margin-inline:30px}
+.alumni-horizontal .alumni-motion-controls{left:0;right:0}
+@media(max-width:760px){main>.home-alumni.alumni-horizontal>.home-editorial{width:calc(100% - 28px)}.alumni-horizontal .alumni-moving-row{margin-inline:24px}.alumni-horizontal .alumni-motion-controls{left:0;right:0}main>.home-alumni.alumni-horizontal{padding-top:22px;padding-bottom:24px}}
+@media(max-width:760px){body:not(.about-page) main>.section:not(.hero),body .inner-layout.section{padding-top:18px;padding-bottom:18px}body.inner-page .inner-banner{min-height:190px;padding:28px 4% 22px}body .inner-layout.section,body.related-about-page .inner-layout,body .about-shell{width:94%}body .about-panels{padding:20px 14px}body .inner-layout{row-gap:18px}body .journey-intro{padding-block:18px;gap:18px}body footer .footer-main{gap:20px}body footer{padding-top:22px;padding-bottom:16px}}
