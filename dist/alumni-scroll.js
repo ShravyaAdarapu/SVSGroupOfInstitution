@@ -1,0 +1,8 @@
+(()=>{const section=document.querySelector('.alumni-horizontal');if(!section)return;const row=section.querySelector('.alumni-moving-row'),track=row.firstElementChild,cards=[...track.children];let position=0,last=0,manualUntil=0;const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+cards.forEach(card=>{const clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.inert=true;track.append(clone)});
+const loopWidth=()=>track.children[cards.length].offsetLeft-track.children[0].offsetLeft;
+const tick=time=>{if(last&&!reduced.matches&&!document.hidden&&time>manualUntil&&!section.matches(':hover')&&!section.contains(document.activeElement)){position+=(time-last)*.018;const width=loopWidth();if(width>0&&position>=width)position-=width;row.scrollLeft=position}last=time;requestAnimationFrame(tick)};requestAnimationFrame(tick);
+row.addEventListener('scroll',()=>{if(Math.abs(row.scrollLeft-position)>2)position=row.scrollLeft});
+section.querySelectorAll('[data-alumni-motion]').forEach(button=>button.addEventListener('click',()=>{manualUntil=performance.now()+1800;row.scrollBy({left:(cards[0].offsetWidth+24)*(button.dataset.alumniMotion==='next'?1:-1),behavior:reduced.matches?'auto':'smooth'})}));
+row.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();manualUntil=performance.now()+1800;row.scrollBy({left:(cards[0].offsetWidth+24)*(event.key==='ArrowRight'?1:-1),behavior:reduced.matches?'auto':'smooth'})}});
+})();

@@ -1,0 +1,28 @@
+.homepage-content-layout{display:grid;grid-template-columns:235px minmax(0,1fr);gap:28px;width:92%;max-width:1600px;margin:28px auto 0;align-items:start}
+.homepage-content-layout>.college-notice-list{position:sticky;top:125px;align-self:start;width:100%;border:0;border-top:2px solid var(--primary);background:white;max-height:calc(100svh - 145px);overflow-y:auto;scrollbar-width:thin}
+.homepage-content-layout .college-notice-heading{background:none;border-bottom:1px solid var(--line);min-height:0;padding:12px 0;gap:8px}
+.homepage-content-layout .college-notice-heading h2{font-size:21px}
+.homepage-content-layout .college-notice-heading>a{font-size:10px}
+.homepage-content-layout .college-notice-list ul{padding:0}
+.homepage-content-layout .college-notice-list li{padding:12px 0;border-bottom:1px solid var(--line)}
+.homepage-content-layout .college-notice-list li a{font-size:14px;line-height:1.5}
+.homepage-content-layout .college-notice-list small{font-size:11px;line-height:1.5;margin-top:4px}
+.homepage-content-layout .notice-category{font-size:10px;margin-bottom:4px}
+.homepage-content-layout .notice-office-link{padding:10px 0;border:0;font-size:11px}
+.homepage-main-content{min-width:0}
+.homepage-main-content>#news{display:block;width:100%;max-width:none;padding:0 0 28px;margin:0}
+.homepage-main-content #clinical-facilities{width:100%;margin:0}
+.homepage-main-content>.svs-legacy{width:100%;margin:0 0 30px;padding:35px 5%;box-sizing:border-box}
+.homepage-main-content>.svs-legacy .legacy-inner{width:100%;margin:0;max-width:none}
+.homepage-main-content>.svs-legacy h2{font-size:34px}
+.homepage-main-content>.svs-legacy p{font-size:15px;line-height:1.75}
+.homepage-main-content .legacy-stats strong{font-size:29px}
+.homepage-main-content .legacy-stats span{font-size:11px}
+.homepage-main-content>#institutions{width:100%;max-width:none;margin:0;padding:20px 0 35px}
+.homepage-main-content>.homepage-photo-gallery{width:100%;max-width:none;padding:25px 0 35px}
+.homepage-main-content>.alumni-horizontal>.home-editorial{width:92%}
+.homepage-main-content .section-heading{gap:24px}
+.homepage-main-content .section-heading h2{font-size:34px!important}
+.homepage-main-content .section-heading p{font-size:14px}
+@media(max-width:1100px){.homepage-content-layout{grid-template-columns:210px minmax(0,1fr);gap:22px}.homepage-main-content .legacy-stats{grid-template-columns:repeat(3,1fr);gap:16px}.homepage-main-content .elastic-gallery{gap:12px}.homepage-main-content .elastic-gallery .card-body{padding:24px 16px}.homepage-main-content .elastic-gallery .card-body h3{font-size:23px}.homepage-main-content .college-study-switch{flex-wrap:wrap}.homepage-main-content .college-study-switch button{font-size:11px;padding:8px 5px}}
+@media(max-width:760px){.homepage-content-layout{display:block;width:90%;margin-top:22px}.homepage-content-layout>.college-notice-list{position:static;max-height:none;margin-bottom:28px}.homepage-content-layout .college-notice-heading h2{font-size:22px}.homepage-main-content>.svs-legacy{padding:28px 6%}.homepage-main-content .section-heading h2{font-size:30px!important}}

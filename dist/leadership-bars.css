@@ -1,0 +1,23 @@
+.leadership-bars .people-directory{display:flex;flex-direction:column;gap:0}
+.leadership-bars .people-directory>.leader-profile{display:grid;grid-template-columns:190px minmax(0,1fr);gap:34px;align-items:start;padding:38px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none;background:transparent;overflow:visible}
+.leadership-bars .people-directory>.leader-profile:nth-child(even){grid-template-columns:minmax(0,1fr) 190px}
+.leadership-bars .leader-profile:nth-child(even)>.leader-portrait{grid-column:2;grid-row:1}
+.leadership-bars .leader-profile:nth-child(even)>div{grid-column:1;grid-row:1}
+.leadership-bars .people-directory .leader-portrait{width:190px;height:245px;border:0;border-radius:10px;object-fit:cover;object-position:center top;box-shadow:none;position:sticky;top:125px}
+.leadership-bars .people-directory .leader-profile h3{font-size:29px;line-height:1.25;margin:0 0 12px}
+.leadership-bars .people-directory .leader-profile>div>p{font-size:17px;line-height:1.6;margin:0 0 8px}
+.leadership-bars .people-directory .leader-profile small{font-size:14px;line-height:1.6}
+.leadership-bars .people-directory .leader-message-body{margin-top:24px}
+.leadership-bars .people-directory .leader-message-body p{font-size:16px;line-height:1.85;margin:0 0 17px;max-width:none}
+.leadership-bars .people-directory>.leader-profile:before{top:auto;bottom:-1px;height:2px}
+.leadership-bars .people-directory>.leader-profile:hover{background:transparent;box-shadow:none;transform:translateY(-2px)}
+.leadership-bars .people-directory>.leader-profile:hover .leader-portrait{box-shadow:0 0 0 2px var(--primary);transform:scale(1.025)}
+@media(max-width:1150px){.leadership-bars .people-directory>.leader-profile,.leadership-bars .people-directory>.leader-profile:nth-child(even){grid-template-columns:150px minmax(0,1fr);gap:24px}.leadership-bars .people-directory .leader-portrait{width:150px;height:200px}.leadership-bars .leader-profile:nth-child(even)>.leader-portrait{grid-column:1}.leadership-bars .leader-profile:nth-child(even)>div{grid-column:2}.leadership-bars .people-directory .leader-profile h3{font-size:26px}}
+@media(max-width:600px){.leadership-bars .people-directory>.leader-profile,.leadership-bars .people-directory>.leader-profile:nth-child(even){display:block;padding:28px 0}.leadership-bars .people-directory .leader-portrait{position:static;width:150px;height:190px;float:left;margin:0 22px 18px 0}.leadership-bars .leader-profile:nth-child(even)>.leader-portrait{float:right;margin:0 0 18px 22px}.leadership-bars .leader-profile>div{display:contents}.leadership-bars .people-directory .leader-message-body{display:block;clear:both}.leadership-bars .leader-profile:after{content:'';display:block;clear:both}}
+@media(prefers-reduced-motion:reduce){.leadership-bars .people-directory>.leader-profile:hover,.leadership-bars .people-directory>.leader-profile:hover .leader-portrait{transform:none}}
+.hod-leadership{scroll-margin-top:120px}
+.hod-leadership-list{margin:28px 0 0;display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+.hod-leadership-list>div{padding:19px 0;border-bottom:1px solid var(--line)}
+.hod-leadership-list dt{font-size:18px;color:var(--deep);font-weight:600;line-height:1.4;margin:0 0 7px}
+.hod-leadership-list dd{font-size:16px;color:var(--muted);line-height:1.6;margin:0}
+@media(max-width:760px){.hod-leadership-list{grid-template-columns:1fr}}

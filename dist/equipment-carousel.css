@@ -1,0 +1,22 @@
+.equipment-wrapper{width:100%;margin:18px 0 12px}
+.equipment-carousel{position:relative;height:280px;overflow:hidden;isolation:isolate}
+.equipment-carousel .carousel__item{position:absolute;inset-inline:0;top:90px;display:flex;align-items:center;gap:18px;min-height:100px;padding:18px 20px;border:1px solid #d7e3dd;border-radius:7px;background:#fff;box-sizing:border-box;opacity:0;transform:translateY(90px) scale(.94);transition:transform .6s ease,opacity .6s ease;pointer-events:none}
+.equipment-carousel .carousel__item.is-current{opacity:1;transform:translateY(0) scale(1);z-index:3;box-shadow:0 8px 22px #164d4810}
+.equipment-carousel .carousel__item.is-previous{opacity:.4;transform:translateY(-90px) scale(.94);z-index:1}
+.equipment-carousel .carousel__item.is-next{opacity:.4;transform:translateY(90px) scale(.94);z-index:1}
+.carousel__item-head{display:grid;place-items:center;flex:0 0 62px;height:62px;background:#eaf2ee;border-radius:50%;color:var(--primary);font-family:var(--sans);font-size:17px;font-weight:600;letter-spacing:0}
+.carousel__item-body .title{font-size:20px;line-height:1.35;font-weight:600;color:var(--deep);margin:0 0 6px}
+.carousel__item-body p:not(.title){font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.equipment-controls{display:flex;align-items:center;justify-content:flex-end;gap:17px;padding-top:8px}
+.equipment-controls button{background:none;border:0;border-bottom:1px solid #bbcec5;color:var(--primary);font:inherit;font-size:12px;padding:6px 0;cursor:pointer}
+.equipment-position{font-size:12px;color:var(--muted)}
+.equipment-carousel:focus-visible,.equipment-controls button:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+@media(max-width:600px){.equipment-carousel .carousel__item{gap:12px;padding:15px 12px}.carousel__item-head{flex-basis:48px;height:48px;font-size:14px}.carousel__item-body .title{font-size:18px}.carousel__item-body p:not(.title){font-size:13px}.equipment-controls{justify-content:center}}
+@media(prefers-reduced-motion:reduce){.equipment-carousel .carousel__item{transition:none}}
+
+.home-equipment .equipment-photo-sequence{min-height:510px;overflow:hidden;border-radius:3px}
+.home-equipment .equipment-photo-sequence img{opacity:0;transition:opacity 1s ease;object-fit:cover}
+.home-equipment .equipment-photo-sequence img.is-visible{opacity:1}
+.home-equipment .equipment-photo-sequence figcaption{z-index:2;max-width:calc(100% - 40px);line-height:1.5;background:#164d48ed}
+@media(max-width:600px){.home-equipment .equipment-photo-sequence{min-height:310px}}
+@media(prefers-reduced-motion:reduce){.home-equipment .equipment-photo-sequence img{transition:none}}

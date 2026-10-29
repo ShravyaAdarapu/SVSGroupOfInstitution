@@ -1,0 +1,19 @@
+.leadership-directory-page .inner-content>.detail-block{padding:0 0 30px;margin-bottom:30px;border:0}
+.leadership-directory-page .inner-content>.detail-block>h2{font-size:29px;margin:0 0 23px;padding-bottom:13px;border-bottom:1px solid var(--line)}
+.leadership-directory-page .people-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.leadership-directory-page .people-directory>.leader-profile,.leadership-directory-page .people-directory>.leader-profile:nth-child(even){display:grid;grid-template-columns:112px minmax(0,1fr);gap:24px;align-items:center;padding:23px 0;border:0;border-bottom:1px solid var(--line);background:none;border-radius:0;box-shadow:none;transform:none;overflow:visible}
+.leadership-directory-page .leader-profile:nth-child(even)>.leader-portrait,.leadership-directory-page .leader-profile>.leader-portrait{grid-column:1;grid-row:1;position:static;width:112px;height:135px;border-radius:5px;object-fit:cover;object-position:center top;float:none;margin:0;box-shadow:none;transition:filter .2s;transform:none}
+.leadership-directory-page .people-directory>.leader-profile>div,.leadership-directory-page .people-directory>.leader-profile:nth-child(even)>div{display:block;grid-column:2;grid-row:1;min-width:0}
+.leadership-directory-page .people-directory .leader-profile h3{font-size:24px;line-height:1.3;margin:0 0 8px}
+.leadership-directory-page .people-directory .leader-profile>div>p{font-size:16px;line-height:1.5;margin:0 0 7px;color:var(--deep)}
+.leadership-directory-page .people-directory .leader-profile small{display:block;font-size:13px;line-height:1.65;color:var(--muted)}
+.leadership-directory-page .people-directory>.leader-profile:hover{transform:none;background:none;box-shadow:none}
+.leadership-directory-page .people-directory>.leader-profile:hover .leader-portrait{transform:none;box-shadow:none;filter:brightness(.96)}
+.leadership-directory-page .leader-profile:before,.leadership-directory-page .leader-profile:after{display:none}
+.leadership-directory-page #hospital-leadership>.detail-block{padding:20px 0 0;margin:15px 0 0;border:0;background:none}
+.leadership-directory-page #hospital-leadership>.detail-block h2{font-size:23px}
+.leadership-directory-page .hod-leadership-list{margin-top:0;column-gap:40px}
+.leadership-directory-page .hod-leadership-list>div{padding:15px 0}
+.leadership-directory-page .hod-leadership-list dt{font-size:16px}.leadership-directory-page .hod-leadership-list dd{font-size:15px}
+@media(max-width:850px){.leadership-directory-page .people-directory{grid-template-columns:1fr}.leadership-directory-page .people-directory>.leader-profile,.leadership-directory-page .people-directory>.leader-profile:nth-child(even){grid-template-columns:100px minmax(0,1fr);gap:20px}.leadership-directory-page .leader-profile>.leader-portrait,.leadership-directory-page .leader-profile:nth-child(even)>.leader-portrait{width:100px;height:125px}.leadership-directory-page .people-directory .leader-profile h3{font-size:22px}}
+@media(max-width:500px){.leadership-directory-page .people-directory>.leader-profile,.leadership-directory-page .people-directory>.leader-profile:nth-child(even){grid-template-columns:82px minmax(0,1fr);gap:17px;padding:20px 0}.leadership-directory-page .leader-profile>.leader-portrait,.leadership-directory-page .leader-profile:nth-child(even)>.leader-portrait{width:82px;height:105px}.leadership-directory-page .people-directory .leader-profile h3{font-size:20px}.leadership-directory-page .people-directory .leader-profile>div>p{font-size:14px}.leadership-directory-page .people-directory .leader-profile small{font-size:12px}}

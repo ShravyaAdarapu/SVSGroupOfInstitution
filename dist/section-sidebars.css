@@ -1,0 +1,15 @@
+.group-sidebar-page .dropdown-section-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;width:90%;max-width:1380px;margin:0 auto;padding:45px 0 60px;align-items:start}
+.group-sidebar-page .section-sidebar{position:sticky;top:110px;display:flex;flex-direction:column;align-self:start;gap:0;margin:0;padding:16px 0 22px;background:#fff;border-right:1px solid var(--line);box-shadow:none;min-width:0;max-width:100%;font-size:16px}
+.sidebar-group-title{font-size:12px;font-weight:600;color:var(--muted);margin:0;padding:0 24px 14px}
+.section-sidebar a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 24px;border-left:4px solid transparent;color:var(--deep);line-height:1.4;transition:color .2s,background .2s}
+.section-sidebar a:hover{background:var(--soft);color:var(--primary)}
+.section-sidebar a[aria-current=page]{background:var(--primary);color:#fff;border-left-color:var(--deep);font-weight:600}
+.section-sidebar a[aria-current=page]:after{content:'→';font-weight:400}
+.section-sidebar hr{border:0;border-top:1px solid var(--line);margin:16px 24px}
+.group-sidebar-page .inner-content{grid-column:2;grid-row:1;min-width:0}
+.dropdown-section-content{min-width:0}
+.group-sidebar-page .dropdown-section-content>.section{padding:24px 0 40px!important;min-height:0}
+.group-sidebar-page .dropdown-section-content>.section>.section-heading{gap:28px}
+.departments-page .dropdown-section-layout .section-sidebar{position:sticky;top:110px;order:0}
+@media(max-width:1000px){.group-sidebar-page .dropdown-section-layout{display:flex;flex-direction:column;width:92%;gap:26px;padding-top:24px}.group-sidebar-page .section-sidebar,.departments-page .dropdown-section-layout .section-sidebar{position:static;display:flex;flex-direction:row;flex-wrap:wrap;width:100%;border-right:0;border-bottom:1px solid var(--line);padding:0 0 14px;gap:4px;order:0}.sidebar-group-title{width:100%;padding:0 12px 9px}.section-sidebar a{font-size:14px;padding:10px 12px;border-left:0}.section-sidebar hr{width:100%;margin:8px 0}.group-sidebar-page .inner-content,.dropdown-section-content{width:100%;order:1}}
+@media(prefers-reduced-motion:reduce){.section-sidebar a{transition:none}}

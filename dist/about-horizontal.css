@@ -1,0 +1,48 @@
+.about-shell{display:block;max-width:1380px;width:90%}
+.about-shell>.about-menu,.related-about-page .inner-layout>.about-menu{position:relative;top:auto;display:flex;flex-direction:row!important;flex-wrap:wrap;align-items:center!important;justify-content:flex-start;gap:4px 8px!important;width:100%;max-width:none;max-height:none;margin:0;padding:16px 18px;border-right:0;border-bottom:1px solid var(--line);overflow:visible!important;background:#fff;box-shadow:none;z-index:5}
+.about-menu>a{padding:11px 9px;border-left:0;border-bottom:2px solid transparent;font-size:14px;white-space:nowrap}
+.about-menu>a[aria-current=true]{border-left:0;border-bottom-color:var(--deep)}
+.about-menu>.about-nav-group{position:relative;flex:0 0 auto;width:auto;margin:0}
+.about-menu .about-nav-group>summary{padding:11px 9px;gap:8px;font-size:14px}
+.about-menu .about-nav-group>.about-nav-people{position:absolute;top:calc(100% + 5px);left:0;width:270px;max-width:calc(100vw - 50px);padding:10px 0;background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px #164d4814;z-index:20;border-radius:5px;max-height:60vh;overflow:auto}
+.about-menu .about-nav-people a{white-space:normal;padding:11px 18px}
+.related-about-page .inner-layout{display:block;width:90%;max-width:1380px;padding-top:24px}
+.related-about-page .inner-content{padding-top:32px;width:100%}
+.about-panels{padding:36px 28px 44px}
+.about-nav-group[open]>summary{background:var(--soft);color:var(--primary)}
+.about-nav-group:has(a[aria-current=true])>summary{background:var(--primary);color:#fff}
+@media(max-width:760px){.about-shell,.related-about-page .inner-layout{width:94%}.about-shell>.about-menu,.related-about-page .inner-layout>.about-menu{padding:12px 6px;gap:2px!important}.about-menu>a,.about-menu .about-nav-group>summary{font-size:14px;padding:10px}.about-menu .about-nav-group>.about-nav-people{position:fixed;top:auto;left:5%;right:5%;width:90%;max-width:90%;max-height:45vh}.about-panels{padding:26px 18px}.related-about-page .inner-content{padding-top:26px}}
+
+.about-menu>a,.about-menu .about-nav-group>summary{transition:background .18s,color .18s;border-radius:2px;padding-inline:7px;font-size:14px}
+.about-menu>a:hover,.about-menu>a:focus-visible,.about-menu .about-nav-group>summary:hover,.about-menu .about-nav-group>summary:focus-visible{background:#e9f2ee;color:var(--deep)}
+.about-menu>a[aria-current=true]:hover{background:var(--primary);color:#fff}
+.about-menu .about-nav-people a{display:block;line-height:1.4;padding:11px 16px;border-left:3px solid transparent;transition:background .18s,border-color .18s}
+.about-menu .about-nav-people a:hover,.about-menu .about-nav-people a:focus-visible{background:#edf4f0;border-left-color:var(--primary);color:var(--deep)}
+.about-menu .about-nav-people small{display:block;font-size:11px;color:var(--muted);margin-top:4px;font-weight:400}
+.about-menu .about-nav-group>.about-nav-people{top:100%;margin-top:0;width:290px}
+#society-leadership,#medical-leadership,#hospital-leadership{scroll-margin-top:130px}
+@media(min-width:1100px){.about-shell>.about-menu,.related-about-page .inner-layout>.about-menu{gap:4px!important;padding-inline:8px}}
+
+/* All About destinations share one horizontal section navigation. */
+body.about-page .about-shell,body.related-about-page .inner-layout{display:block!important;grid-template-columns:none!important}
+body .about-menu{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;border-right:0!important;max-height:none!important}
+body .about-menu>a,body .about-menu>.about-nav-group{flex:0 0 auto!important;width:auto!important}
+body .about-menu>a,body .about-menu>.about-nav-group>summary{white-space:nowrap!important}
+@media(max-width:1100px){body .about-menu{overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:thin;padding-bottom:14px!important}body .about-menu .about-nav-group>.about-nav-people{position:fixed;top:auto;left:5%;right:5%;width:90%;max-width:90%;max-height:45vh;z-index:50}}
+
+body .about-shell>.about-menu,body.related-about-page .inner-layout>.about-menu{position:sticky!important;top:var(--about-menu-top,114px)!important;justify-content:center!important;z-index:30;box-shadow:0 4px 12px #164d4808}
+@media(max-width:1100px){body .about-menu{justify-content:safe center!important}}
+
+.about-page .about-message{grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:clamp(28px,4vw,56px)}
+.about-page .about-person{width:100%;top:calc(var(--about-menu-top,114px) + 95px)}
+.about-page .about-person img{width:100%;max-width:340px;height:auto;aspect-ratio:1;object-fit:cover;margin:0 auto 22px}
+.about-page .about-person strong{font-size:20px}
+.about-page .about-person span{font-size:14px}
+@media(max-width:700px){.about-page .about-message{grid-template-columns:1fr;gap:28px}.about-page .about-person{position:static}.about-page .about-person img{width:75%;max-width:280px}}
+
+/* Align every leadership message with the portrait rather than the top edge. */
+.about-page .about-message{align-items:center}
+.about-page .about-message>.about-person{position:static;align-self:center;text-align:center}
+.about-page .about-message>.about-person+div{align-self:center;min-width:0;padding-block:12px}
+.about-page .about-message blockquote{margin-top:0}
+@media(max-width:700px){.about-page .about-message>.about-person+div{padding-block:0}}
