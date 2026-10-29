@@ -6,7 +6,7 @@
   const isComplaint=complaint();
   document.getElementById('contact-kind-description').textContent=isComplaint?'Tell us what happened and how we can help. For a formal grievance, contact the college office for the appropriate committee and procedure.':'Ask us about courses, admissions or college facilities.';
   document.getElementById('contact-message-label').textContent=isComplaint?'Your complaint':'Your enquiry';
-  document.getElementById('contact-send-button').firstChild.textContent=isComplaint?'Prepare complaint email ':'Prepare enquiry email ';
+  document.getElementById('contact-send-button').firstChild.textContent='Mail us ';
   status.textContent='';
  }));
  form.addEventListener('submit',event=>{

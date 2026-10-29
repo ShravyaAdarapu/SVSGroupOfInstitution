@@ -99,3 +99,5 @@ Horizontal About menu also groups Educational Society, Medical College and Group
 2026-10-29: Alumni main navigation and directory; profile fields name, graduation year/course, designation, workplace and city. Eight temporary fictional profiles approved by user; replace alumni-profiles.js data and stock photos before launch.
 
 2026-10-29: Committees supersedes previous grouping: use only brochure Section 7 in two normal tables (11+8 unique committees), retain original mottos/responsibilities; no extra summaries or duplicates.
+
+2026-10-29: Five-site review implemented admissions guidance/FAQs, Downloads hub, student-help routes, hospital visitor information and college directions. Keep hero unchanged. Contact button Mail us both modes; remove explanatory email note as requested. No automatic enquiry popup. Review references and limits in WEBSITE_REVIEW.md.
