@@ -1,0 +1,8 @@
+/* Only JS-registered, offscreen content is hidden. */
+@media(prefers-reduced-motion:no-preference){
+.svs-reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
+.svs-reveal.is-visible{opacity:1;transform:translateY(0)}
+.svs-reveal:focus-within{opacity:1;transform:none;transition-delay:0ms}
+}
+@media(prefers-reduced-motion:reduce){.svs-reveal{opacity:1;transform:none;transition:none}}
+@media print{.svs-reveal{opacity:1!important;transform:none!important}}
