@@ -46,3 +46,18 @@ body .about-shell>.about-menu,body.related-about-page .inner-layout>.about-menu{
 .about-page .about-message>.about-person+div{align-self:center;min-width:0;padding-block:12px}
 .about-page .about-message blockquote{margin-top:0}
 @media(max-width:700px){.about-page .about-message>.about-person+div{padding-block:0}}
+
+/* Message layout: portrait and identity above the message on all screens. */
+.about-page .about-message{grid-template-columns:minmax(0,1fr);gap:28px}
+.about-page .about-message>.about-person{width:100%;margin:0 auto;text-align:center}
+.about-page .about-message>.about-person img{width:min(100%,300px);max-width:300px;margin:0 auto 18px}
+.about-page .about-message>.about-person+div{width:100%;max-width:1000px;margin:0 auto;padding:0}
+@media(max-width:700px){.about-page .about-message{gap:22px}.about-page .about-message>.about-person img{width:min(75%,250px)}}
+
+/* Soft rectangular portraits suit the vertically stacked message layout. */
+.about-page .about-message>.about-person img{width:min(100%,280px);max-width:280px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:12px;border:1px solid var(--line);box-shadow:0 8px 22px #164d4810}
+@media(max-width:700px){.about-page .about-message>.about-person img{width:min(75%,230px)}}
+
+.about-page .about-message>.about-person figcaption{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;text-align:center}
+.about-page .about-message>.about-person figcaption :is(h3,strong,p,small,span){display:block;width:100%;max-width:none;margin:0;text-align:center!important}
+.about-page .about-message>.about-person figcaption :is(p,small,span){line-height:1.5}
