@@ -44,3 +44,11 @@ identities, approvals, services or social handles.
 - Choose a hosting provider and set up deployment.
 - Optional cleanup: ten `.emf` portrait files in `dist/assets/` are not referenced by any page.
 - Optional: add a README.
+
+## Clean URLs (30 October 2026)
+
+- Homepage: `/`. Other pages: `/about/`, `/contact/`, etc.
+- Edit the full content in `dist/<page>/index.html`; root `<page>.html` files are legacy redirect stubs.
+- Keep page links and asset URLs root-relative. Local previews need an HTTP server serving `dist/` at the root.
+- Directory index routing supports direct visits and refreshes without a framework router. The host must serve directory `index.html` files.
+- Redirect stubs preserve query strings and fragments with JavaScript and provide a meta refresh/link fallback. `clean-urls.js` also redirects explicit `/index.html` URLs to their directory address.

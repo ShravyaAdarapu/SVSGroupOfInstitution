@@ -8,8 +8,9 @@ export function SlideTabs({navigation}:{navigation:HTMLElement}){
  const reduced=useReducedMotion();
  useEffect(()=>{
   const items=Array.from(navigation.children).filter((node):node is HTMLElement=>node instanceof HTMLElement&&node.matches('a,details'));
-  const path=location.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/index';
-  const selected=items.find(item=>Array.from(item.matches('a')?[item]:item.querySelectorAll('a')).some(a=>(a.getAttribute('href')||'').split('#')[0].replace(/\.html$/,'')===path.slice(1)))||items[0];
+  const normalize=(value:string)=>new URL(value,location.origin).pathname.replace(/\/index\.html$/,'/').replace(/\.html$/,'').replace(/\/$/,'')||'/';
+  const path=normalize(location.href);
+  const selected=items.find(item=>Array.from(item.matches('a')?[item]:item.querySelectorAll('a')).some(a=>normalize(a.getAttribute('href')||'/')===path))||items[0];
   if(selected){const link=selected.matches('a')?selected:selected.querySelector('summary');link?.setAttribute('data-nav-current','true');if(link?.matches('a'))link.setAttribute('aria-current','page');}
   const move=(item?:HTMLElement)=>{
    if(!item||matchMedia('(max-width:1100px)').matches){setPosition(p=>({...p,opacity:0}));return;}
